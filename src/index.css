@@ -1,0 +1,68 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300&family=Righteous&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer{
+    li{
+        @apply px-5 cursor-pointer
+    }
+
+    body{
+        @apply text-white
+    }
+
+    .media{
+        @apply w-[160px] h-[50px] ml-[-100px] hover:ml-[-10px] duration-300 rounded-r my-1 
+    }
+
+    .text{
+        @apply relative
+    }
+
+    .text:after {
+        @apply content-[''] bg-secondary h-[3px] w-0 left-0 -bottom-[5px] 
+        rounded-xl absolute
+    }
+    .text:hover::after{
+        @apply w-full duration-300
+    }
+    
+}
+
+.content{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 400px;
+}
+
+.content-div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.content-div:hover{
+    background-image: linear-gradient(
+        to right,
+        rgba(112, 157, 255, 0.8),
+        hsla(242, 74%, 61%, 0.8)
+    )!important;
+    
+    
+}
+
+.rotate{
+    transition: all 1s ease-in-out;
+    transform: rotate(-5deg);
+}
+
+.rotate:hover{
+    transform: rotate(35deg);
+}
